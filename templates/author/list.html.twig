@@ -1,0 +1,24 @@
+
+{%set a=0%}
+{% for safa in authors %}
+
+{{safa.username|upper}}
+<br>
+{{safa.id}}
+{{safa.email}}
+{% set a=a+safa.nb_books%}
+
+
+<a href="{{ path('d', {'id': 1}) }}">Détails</a>
+
+
+{% else %}
+<p> cest un tableau vide </p>
+
+{% endfor %}
+<br>
+le nb est : {{authors|length}}
+<br>
+le nb livre est : {{a}}
+
+

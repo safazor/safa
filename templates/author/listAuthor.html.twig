@@ -1,0 +1,24 @@
+
+</head>
+<body>
+<table>
+     <tr>
+         <td>ID</td>
+         <td>Username</td>
+         <td>Email</td>
+         <td>Actions</td>
+     </tr>
+      {% for a in list %}
+        <tr>
+         <td> {{a.ID}} </td>
+         <td> {{a.Username}} </td>
+         <td> {{a.Email}} </td>
+
+         <td>
+           <a href=""> Show </a>
+           <td><a href="{{ path('app_edit', {'id': a.id}) }}">edit</a></td>
+           <td><a href="{{ path('app_delete', {'id': a.id}) }}">delete</a></td>
+         </td>
+        </tr>
+      {% endfor %}
+</table>
